@@ -1,0 +1,434 @@
+:root {
+  --background: #5c67ff;
+  --colorBtn: #4d50fb;
+  --hcolorBtn: #2e6aaa;
+  --white: #fff;
+  --black: #162447;
+  --light: #eeeeee;
+  --lgreen: #00c55c;
+  --green: #009c49;
+}
+.App {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--light);
+}
+.head_name {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--background);
+}
+.head_name p {
+  padding: 0 16px;
+}
+.head_name a {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.336);
+  padding: 10px;
+  border-radius: 100px;
+}
+.all_components {
+  margin: 60px 0 0 0;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+}
+
+.select_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.select_box a {
+  text-decoration: none;
+  width: 240px;
+  height: 240px;
+  margin: 40px;
+  /* border-radius: 20px; */
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: var(--white);
+}
+.select_box a:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+/* For Notes Page */
+.all_notes {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.add_note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.add_note h4 {
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+.add_note p {
+  display: flex;
+  float: left;
+  color: var(--black);
+  width: 100%;
+  padding-left: 20px;
+}
+.add_note p i {
+  margin: 0 10px 0 0;
+  color: var(--green);
+}
+.add_note input {
+  width: calc(100% - 32px);
+  padding: 16px;
+  margin: 12px 0;
+  border: none;
+  font-weight: 400;
+  color: #383e4e;
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.add_note input:focus {
+  outline: none;
+}
+.add_note textarea {
+  min-width: calc(100% - 32px);
+  width: calc(100% - 32px);
+  max-width: calc(100% - 32px);
+  min-height: 150px;
+  max-height: 200px;
+  padding: 16px;
+  margin: 12px 0;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #383e4e;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  line-height: 1.5;
+}
+.add_note textarea:focus {
+  outline: none;
+}
+.add_note button {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  color: var(--white);
+  background-color: var(--colorBtn);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: none;
+  font-size: 16px;
+}
+.add_note button:disabled {
+  background-color: #8cb7e6;
+}
+.add_note button:disabled:hover {
+  cursor: not-allowed;
+}
+.add_note button:hover {
+  cursor: pointer;
+}
+.vertical_column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 360px;
+  height: auto;
+}
+
+.show_note {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  min-height: 150px;
+  padding: 10px 15px 60px 15px;
+  margin: 10px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: var(--white);
+}
+.show_note h4 {
+  width: 100%;
+  color: var(--black);
+  margin: 0 0 16px 0;
+  padding: 5px 0;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
+}
+.show_note h4::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 70px;
+  height: 2px;
+  background-color: #7c8396;
+}
+.show_note p {
+  width: 100%;
+  text-align: left;
+  color: #383e4e;
+  line-height: 1.5;
+}
+.show_note br {
+  content: " " !important;
+  display: block !important;
+  margin-bottom: 10px !important;
+}
+.note_date {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: #f8f8f8;
+  color: #7c8396;
+}
+/* hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+  background-color: #dddddd;
+  height: 1px;
+} */
+.tag_no {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  right: 0px;
+  /* border-radius: 100px; */
+  background-color: #fff;
+  color: #8e8e8e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.note_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-top: 1px solid #eeeeee;
+}
+.rem_btn {
+  width: 30px;
+  float: right;
+  border: none;
+  background-color: #fff;
+  color: #8e8e8e;
+  border: none;
+  font-size: 16px;
+  height: 30px;
+  margin: 0 10px;
+}
+.rem_btn:hover {
+  cursor: pointer;
+  background-color: #ffe3e3;
+  color: #ff0000;
+}
+.edit_btn {
+  width: 30px;
+  float: right;
+  border: none;
+  color: #8e8e8e;
+  background-color: var(--white);
+  font-size: 16px;
+  height: 30px;
+  margin: 0 10px;
+}
+.edit_btn:hover {
+  color: #2196f3;
+  background-color: #e5f3fe;
+  cursor: pointer;
+}
+/* Show Link */
+.show_link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  min-height: 40px;
+  padding: 10px 15px 60px 15px;
+  margin: 10px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: var(--white);
+}
+.show_link h4 {
+  width: 100%;
+  color: var(--black);
+  margin: 0 0 16px 0;
+  padding: 5px 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 22px;
+  position: relative;
+}
+.show_link h4::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 120px;
+  height: 2px;
+  background-color: #7c8396;
+}
+.show_link p {
+  width: 100%;
+  text-align: left;
+  color: #383e4e;
+  line-height: 1.5;
+}
+.show_link a {
+  text-decoration: none;
+  color: var(--background);
+  width: 100%;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+
+.modal {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.63);
+  overflow-y: auto;
+}
+.modal_body {
+  width: 100%;
+  margin-top: 70px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: var(--white);
+  color: var(--black);
+}
+.cross:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+}
+.hide {
+  display: none;
+  z-index: 1;
+}
+.note_navbar {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.808);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.note_navbar button {
+  margin: 0 16px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background-color: var(--background);
+  color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.note_navbar button:first-child {
+  padding: 0 20px;
+}
+.note_navbar button:last-child {
+  width: 40px;
+  padding: 0px;
+}
+.note_navbar button:hover {
+  cursor: pointer;
+}
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+.searchBar input {
+  width: 680px;
+  max-width: 90%;
+  padding: 16px;
+  margin: 12px 0;
+  border: none;
+  font-weight: 400;
+  color: #383e4e;
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.searchBar input:focus {
+  outline: none;
+}
+.add_passkey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

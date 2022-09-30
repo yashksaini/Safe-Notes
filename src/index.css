@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", sans-serif;
+}
+:root {
+  --background: #5c67ff;
+  --colorBtn: #4d50fb;
+  --hcolorBtn: #2e6aaa;
+  --white: #fff;
+  --black: #162447;
+  --light: #9098a7;
+  --lgreen: #00c55c;
+  --green: #009c49;
+}
+body,
+html {
+  background-color: var(--light);
+  min-height: 100%;
+  min-width: 100%;
+}
