@@ -63,7 +63,7 @@ To enhance security, a 4-digit passkey is used to lock and unlock the applicatio
 - Local data storage for enhanced privacy
 - User-friendly interface for easy navigation
 - Clear visual feedback for passkey entry and validation
-- Progressive Web Application that is stored on the smartphone
+- There is a Progressive Web Application that can be saved on your smartphone.
 
 ## Used For
 
